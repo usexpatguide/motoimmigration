@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>设计层级总览 · 墨途移民国际官网</title>
+<style>
+  :root{
+    --pine:#13544A; --pine-deep:#0C342E; --pine-soft:#E3EEE9;
+    --terra:#C0562F; --terra-soft:#F6E7DE;
+    --sand:#E5B567; --sand-soft:#F7EFDF;
+    --ink:#22302B; --muted:#5F6E68; --line:#E3E8E4; --white:#FFFFFF;
+    --bg:#F4F5EF; --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans SC",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:1080px;margin:0 auto;padding:40px 24px 80px}
+  header.page{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-bottom:22px;border-bottom:3px solid var(--pine);margin-bottom:28px}
+  header.page h1{font-size:26px;color:var(--pine)}
+  header.page p{color:var(--muted);font-size:13px}
+  h2{font-size:19px;color:var(--pine);margin:34px 0 14px;padding-left:12px;border-left:4px solid var(--terra)}
+  h3{font-size:15px;color:var(--ink);margin:16px 0 8px}
+  .badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:700;margin-right:6px}
+  .b-view{background:var(--pine);color:#fff}
+  .b-sec{background:var(--terra-soft);color:var(--terra)}
+  .b-comp{background:var(--sand-soft);color:#8a6a2f}
+  .tree{font-size:13px}
+  .tree .v{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--pine);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+  .tree .v b{color:var(--pine);font-size:14px}
+  .tree ul{list-style:none;margin:8px 0 0 18px}
+  .tree li{padding:3px 0 3px 14px;position:relative}
+  .tree li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:1px;background:var(--line)}
+  .tree li .tag{display:inline-block;margin-left:8px;padding:0 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);font-size:11px;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;background:var(--white);font-size:13px;margin:10px 0}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:var(--pine);color:#fff;font-weight:600}
+  .tokens{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+  .token{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .swatch{height:44px;border-radius:8px;margin-bottom:8px}
+  .token code{font-size:12px;color:var(--muted)}
+  .note{background:var(--sand-soft);border:1px solid #ECD9B4;border-radius:10px;padding:10px 14px;font-size:13px;color:#6d5a2f;margin-top:10px}
+  footer{margin-top:40px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <div>
+      <h1>墨途移民国际 · 官网设计层级总览</h1>
+      <p>单文件站点（index.html）+ 内嵌版（index_embed.html）｜GitHub Pages：usexpatguide.github.io/motoimmigration</p>
+    </div>
+    <p>最后更新：2026-10-04</p>
+  </header>
+
+  <h2>设计令牌（Design Tokens）</h2>
+  <div class="tokens">
+    <div class="token"><div class="swatch" style="background:#13544A"></div><b>pine</b> <code>#13544A</code><br>主色 / 导航 / 标题</div>
+    <div class="token"><div class="swatch" style="background:#0C342E"></div><b>pine-deep</b> <code>#0C342E</code><br>深色区块背景</div>
+    <div class="token"><div class="swatch" style="background:#C0562F"></div><b>terra</b> <code>#C0562F</code><br>强调色 / CTA</div>
+    <div class="token"><div class="swatch" style="background:#E5B567"></div><b>sand</b> <code>#E5B567</code><br>辅助金 / 深底强调</div>
+    <div class="token"><div class="swatch" style="background:#F4F5EF"></div><b>bg</b> <code>#F4F5EF</code><br>页面底色</div>
+    <div class="token"><div class="swatch" style="background:#22302B"></div><b>ink</b> <code>#22302B</code><br>正文</div>
+  </div>
+  <p style="font-size:13px;color:var(--muted);margin-top:10px">字体：Noto Serif SC（衬线标题）/ Noto Sans SC（正文），经 miaoda.feishu.cn 自托管镜像加载，附系统回退栈。组件：subhero、quick-grid、qa-grid、compare 表、benefit-grid、req-grid、tl 时间轴、faq、contact 表单。</p>
+
+  <h2>页面与板块层级</h2>
+  <div class="tree">
+    <div class="v"><b>view-home</b> 首页 <span class="tag">路由 #/</span>
+      <ul>
+        <li>导航栏 navLinks（含 logo、4 页面入口 + 免费评估）</li>
+        <li>hero 主视觉 + 双 CTA + 三项要点</li>
+        <li>dest-grid 目的地（新西兰 / 墨西哥）</li>
+        <li>stats 数据（12 年+ / 3000+ 家庭 / 98% 满意度 / 2 国专注）</li>
+        <li>why-home 为什么选择我们</li>
+        <li>enterprise 中国出海企业人才服务（6 服务卡 + 4 步合作流程 + CTA）</li>
+        <li>faq-home 常见问题</li>
+        <li>contact 免费咨询（formHome）</li>
+        <li>footer（品牌 + 三栏链接 + 版权）</li>
+      </ul>
+    </div>
+    <div class="v"><b>view-mexico</b> 墨西哥临时居留 <span class="tag">路由 #/mexico</span>
+      <ul>
+        <li>subhero（面包屑 + 标题 + CTA）</li>
+        <li>quick-grid 速览 4 项</li>
+        <li>geo-mx 核心问题速览（GEO 问答）</li>
+        <li>why-mx 为什么越来越多人办理</li>
+        <li>intro-mx 项目介绍 + 身份对比表（旅游签 / 临时居留 / 永久居留）</li>
+        <li>req-mx 申请条件 + 费用表 + 工作与语言</li>
+        <li>benefit-mx 6 大好处</li>
+        <li><b>usvisa-mx 墨西哥公民专属美国签证（TN / BCC / E-2）</b> <span class="tag">2026-10-04 新增</span></li>
+        <li>申请流程（6 步时间轴）</li>
+        <li>package-mx 大包服务（一价全包 · 未获批全额退款）</li>
+        <li>faq-mx 常见问题（含美国专属签证问答）</li>
+        <li>contact-mx 咨询（formMexico）</li>
+      </ul>
+    </div>
+    <div class="v"><b>view-nz</b> 新西兰移民（绿名单） <span class="tag">路由 #/nz</span>
+      <ul>
+        <li>subhero（面包屑 + 标题 + CTA）</li>
+        <li>quick-grid 速览 4 项</li>
+        <li>geo-nz 核心问题速览（GEO 问答）</li>
+        <li>intro-nz 绿名单介绍 + Tier1 / Tier2 对比表</li>
+        <li>jobs-nz 绿名单职业清单</li>
+        <li>req-nz 申请条件 + 费用与周期</li>
+        <li>benefit-nz 6 大好处</li>
+        <li>申请流程（6 步时间轴）</li>
+        <li>faq-nz 常见问题</li>
+        <li>contact-nz 咨询（formNz）</li>
+      </ul>
+    </div>
+    <div class="v"><b>view-passport</b> 直接拿护照项目 <span class="tag">路由 #/passport</span>
+      <ul>
+        <li>subhero（面包屑 + 标题 + CTA）</li>
+        <li>quick-grid 速览 4 项</li>
+        <li>geo-passport 核心问题速览（GEO 问答）</li>
+        <li>why-passport 为什么规划第二护照</li>
+        <li>intro-passport 投资入籍介绍</li>
+        <li>compare-passport 8 国项目对比表</li>
+        <li>req-passport 申请条件（2 卡）+ 流程时间轴（5 步）</li>
+        <li>benefit 6 大好处</li>
+        <li>faq-passport 常见问题</li>
+        <li>contact-passport 咨询（formPp）</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>数据与 SEO 状态</h2>
+  <table>
+    <tr><th>项</th><th>状态</th></tr>
+    <tr><td>路由 / 动态标题</td><td>home / mexico / nz / passport 四键齐全，hash 路由含锚点映射</td></tr>
+    <tr><td>表单绑定</td><td>formHome / formMexico / formNz / formPp 全部绑定提交提示</td></tr>
+    <tr><td>JSON-LD FAQPage</td><td>16 问（含墨西哥美国签证、护照项目、企业服务问答）</td></tr>
+    <tr><td>head SEO</td><td>title / description / keywords 已覆盖新西兰、墨西哥、美国专属签证、护照项目、企业出海关键词</td></tr>
+    <tr><td>图片素材</td><td>assets/ 6 张（logo、nz-hero、nz-lake、mx-hero、mx-city、mx-pyramid），内嵌版 Base64</td></tr>
+    <tr><td>发布</td><td>妙搭 app_17e9rqf033h（历次 release finished）+ GitHub Pages 自动部署</td></tr>
+  </table>
+
+  <h2>变更记录</h2>
+  <table>
+    <tr><th>日期</th><th>变更</th><th>文件</th></tr>
+    <tr><td>2026-10-04</td><td>墨西哥页新增「墨西哥公民专属美国签证」板块（TN / BCC / E-2 三卡 + 对比表 + 注意事项）；FAQ 与 JSON-LD 增加对应问答；head description / keywords 同步扩展</td><td>index.html → index_embed.html → 发布</td></tr>
+    <tr><td>2026-09-18</td><td>上传 GitHub（usexpatguide/motoimmigration），启用 Pages</td><td>GitHub 仓库</td></tr>
+    <tr><td>2026-09-17</td><td>新增「直接拿护照项目」页（CBI 合法投资入籍 8 国对比）；导航 / 页脚 / 路由 / 表单 / JSON-LD 全面接入</td><td>index.html → index_embed.html → 发布</td></tr>
+    <tr><td>2026-09-17</td><td>企业出海人才服务板块上线（首页 + 三页 FAQ + 表单选项 + SEO）</td><td>index.html → 发布</td></tr>
+    <tr><td>2026-09-17</td><td>墨西哥页 GEO 问题式重排 + 大包服务 + 转永居居住要求；新西兰页绿名单完整构建</td><td>index.html → 发布</td></tr>
+  </table>
+
+  <div class="note">维护约定：所有改动以 index.html 为唯一源码 → 重跑 embed.py 生成 index_embed.html → shot.py 自检 → lark-cli 发布（app_17e9rqf033h）→ git push 同步 GitHub Pages。本文档随每次设计/代码改动同步更新。</div>
+
+  <footer>墨途移民国际 MOTU IMMIGRATION · 设计层级总览 · 内部维护文档（非线上站点页面）</footer>
+</div>
+</body>
+</html>
