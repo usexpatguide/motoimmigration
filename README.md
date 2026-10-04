@@ -11,10 +11,12 @@
 
 ## 文件说明
 
-- `index.html` — 站点源码（引用 `assets/` 下的图片）
-- `index_embed.html` — 图片已 Base64 内嵌的自包含版本，可直接单文件分发
+- `index.html` — 站点源码（引用 `assets/` 下的图片），GitHub Pages 与妙搭发布均以它为准
+- `index_embed.html` — 历史内嵌快照（Base64 图片自包含版，内容截至 2026-09-18，仅供单文件分发参考）
 - `assets/` — 站点图片素材（hero 图、logo 等）
+- `docs/design-hierarchy.html` — 设计层级总览与变更记录（随每次改动同步更新）
+- `_shots/` — 自检截图产物，不入库
 
 ## 本地预览
 
-直接用浏览器打开 `index.html` 即可（依赖同目录 `assets/`）；或打开 `index_embed.html`（完全自包含，无需 assets 目录）。
+直接用浏览器打开 `index.html` 即可（依赖同目录 `assets/`）。
