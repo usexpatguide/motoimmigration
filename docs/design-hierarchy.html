@@ -123,15 +123,26 @@
         <li>contact-passport 咨询（formPp）</li>
       </ul>
     </div>
+    <div class="v"><b>view-l1</b> 美国绿卡（L-1 / EB-1C） <span class="tag">路由 #/l1 · 2026-10-13 新增独立页</span>
+      <ul>
+        <li>subhero（面包屑 + 标题 + CTA）</li>
+        <li>quick-grid 速览 4 项（L-1A 7 年 / L-1B 5 年 / 免 PERM / 中国护照）</li>
+        <li>geo-l1 核心问题速览（GEO 问答 ×6）</li>
+        <li>l1-eb1c 三卡（L-1A / L-1B / EB-1C）+ 对比表</li>
+        <li>申请流程（6 步时间轴）</li>
+        <li>faq-l1 常见问题（×6）</li>
+        <li>contact-l1 咨询（formL1）</li>
+      </ul>
+    </div>
   </div>
 
   <h2>数据与 SEO 状态</h2>
   <table>
     <tr><th>项</th><th>状态</th></tr>
-    <tr><td>路由 / 动态标题</td><td>home / mexico / nz / passport 四键齐全，hash 路由含锚点映射</td></tr>
-    <tr><td>表单绑定</td><td>formHome / formMexico / formNz / formPp 全部绑定提交提示</td></tr>
+    <tr><td>路由 / 动态标题</td><td>home / mexico / nz / l1 / passport 五键齐全，hash 路由含锚点映射</td></tr>
+    <tr><td>表单绑定</td><td>formHome / formMexico / formNz / formL1 / formPp 全部绑定提交提示</td></tr>
     <tr><td>JSON-LD FAQPage</td><td>17 问（含墨西哥美国签证、L-1 转绿卡、护照项目、企业服务问答）</td></tr>
-    <tr><td>head SEO</td><td>title / description / keywords 已覆盖新西兰、墨西哥、美国专属签证、护照项目、企业出海关键词</td></tr>
+    <tr><td>head SEO</td><td>title / description / keywords 已覆盖新西兰、墨西哥、美国绿卡（L-1/EB-1C）、美国专属签证、护照项目、企业出海关键词</td></tr>
     <tr><td>图片素材</td><td>assets/ 6 张（logo、nz-hero、nz-lake、mx-hero、mx-city、mx-pyramid），内嵌版 Base64</td></tr>
     <tr><td>发布</td><td>妙搭 app_17e9rqf033h（历次 release finished）+ GitHub Pages 自动部署</td></tr>
   </table>
@@ -139,6 +150,7 @@
   <h2>变更记录</h2>
   <table>
     <tr><th>日期</th><th>变更</th><th>文件</th></tr>
+    <tr><td>2026-10-13</td><td>L-1 / EB-1C 从墨西哥页独立为第五视图「美国绿卡」（#/l1）：导航、首页目的地第三卡、页脚、路由、表单、GEO 问答、FAQ、SEO title 全面接入；墨西哥页保留 L-1 FAQ 并指向新页</td><td>index.html → 发布</td></tr>
     <tr><td>2026-10-13</td><td>墨西哥页新增「L-1 签证转绿卡（EB-1C）」板块（L-1A / L-1B / EB-1C 三卡 + 对比表 + 说明）；FAQ 与 JSON-LD 增加对应问答；head description / keywords 同步扩展；修复时间轴圆点 1px 对齐与首页 enterprise 卡片深底文字对比度问题</td><td>index.html → 发布</td></tr>
     <tr><td>2026-10-04</td><td>墨西哥页新增「墨西哥公民专属美国签证」板块（TN / BCC / E-2 三卡 + 对比表 + 注意事项）；FAQ 与 JSON-LD 增加对应问答；head description / keywords 同步扩展</td><td>index.html → index_embed.html → 发布</td></tr>
     <tr><td>2026-09-18</td><td>上传 GitHub（usexpatguide/motoimmigration），启用 Pages</td><td>GitHub 仓库</td></tr>
