@@ -49,7 +49,7 @@
       <h1>墨途移民国际 · 官网设计层级总览</h1>
       <p>单文件站点（index.html）+ 内嵌版（index_embed.html）｜GitHub Pages：usexpatguide.github.io/motoimmigration</p>
     </div>
-    <p>最后更新：2026-10-04</p>
+    <p>最后更新：2026-10-13</p>
   </header>
 
   <h2>设计令牌（Design Tokens）</h2>
@@ -88,9 +88,10 @@
         <li>req-mx 申请条件 + 费用表 + 工作与语言</li>
         <li>benefit-mx 6 大好处</li>
         <li><b>usvisa-mx 墨西哥公民专属美国签证（TN / BCC / E-2）</b> <span class="tag">2026-10-04 新增</span></li>
+        <li><b>l1-eb1c L-1 签证转绿卡（EB-1C 跨国公司高管通道）</b> <span class="tag">2026-10-13 新增</span></li>
         <li>申请流程（6 步时间轴）</li>
         <li>package-mx 大包服务（一价全包 · 未获批全额退款）</li>
-        <li>faq-mx 常见问题（含美国专属签证问答）</li>
+        <li>faq-mx 常见问题（含美国专属签证与 L-1 问答）</li>
         <li>contact-mx 咨询（formMexico）</li>
       </ul>
     </div>
@@ -129,7 +130,7 @@
     <tr><th>项</th><th>状态</th></tr>
     <tr><td>路由 / 动态标题</td><td>home / mexico / nz / passport 四键齐全，hash 路由含锚点映射</td></tr>
     <tr><td>表单绑定</td><td>formHome / formMexico / formNz / formPp 全部绑定提交提示</td></tr>
-    <tr><td>JSON-LD FAQPage</td><td>16 问（含墨西哥美国签证、护照项目、企业服务问答）</td></tr>
+    <tr><td>JSON-LD FAQPage</td><td>17 问（含墨西哥美国签证、L-1 转绿卡、护照项目、企业服务问答）</td></tr>
     <tr><td>head SEO</td><td>title / description / keywords 已覆盖新西兰、墨西哥、美国专属签证、护照项目、企业出海关键词</td></tr>
     <tr><td>图片素材</td><td>assets/ 6 张（logo、nz-hero、nz-lake、mx-hero、mx-city、mx-pyramid），内嵌版 Base64</td></tr>
     <tr><td>发布</td><td>妙搭 app_17e9rqf033h（历次 release finished）+ GitHub Pages 自动部署</td></tr>
@@ -138,6 +139,7 @@
   <h2>变更记录</h2>
   <table>
     <tr><th>日期</th><th>变更</th><th>文件</th></tr>
+    <tr><td>2026-10-13</td><td>墨西哥页新增「L-1 签证转绿卡（EB-1C）」板块（L-1A / L-1B / EB-1C 三卡 + 对比表 + 说明）；FAQ 与 JSON-LD 增加对应问答；head description / keywords 同步扩展；修复时间轴圆点 1px 对齐与首页 enterprise 卡片深底文字对比度问题</td><td>index.html → 发布</td></tr>
     <tr><td>2026-10-04</td><td>墨西哥页新增「墨西哥公民专属美国签证」板块（TN / BCC / E-2 三卡 + 对比表 + 注意事项）；FAQ 与 JSON-LD 增加对应问答；head description / keywords 同步扩展</td><td>index.html → index_embed.html → 发布</td></tr>
     <tr><td>2026-09-18</td><td>上传 GitHub（usexpatguide/motoimmigration），启用 Pages</td><td>GitHub 仓库</td></tr>
     <tr><td>2026-09-17</td><td>新增「直接拿护照项目」页（CBI 合法投资入籍 8 国对比）；导航 / 页脚 / 路由 / 表单 / JSON-LD 全面接入</td><td>index.html → index_embed.html → 发布</td></tr>
