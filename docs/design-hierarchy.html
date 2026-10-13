@@ -56,12 +56,15 @@
   <div class="tokens">
     <div class="token"><div class="swatch" style="background:#13544A"></div><b>pine</b> <code>#13544A</code><br>主色 / 导航 / 标题</div>
     <div class="token"><div class="swatch" style="background:#0C342E"></div><b>pine-deep</b> <code>#0C342E</code><br>深色区块背景</div>
+    <div class="token"><div class="swatch" style="background:#3FA578"></div><b>mint</b> <code>#3FA578</code><br>2026-10 有机重设计新增次级绿</div>
+    <div class="token"><div class="swatch" style="background:#2E8A63"></div><b>mint-deep</b> <code>#2E8A63</code><br>渐变端点 / 焦点</div>
     <div class="token"><div class="swatch" style="background:#C0562F"></div><b>terra</b> <code>#C0562F</code><br>强调色 / CTA</div>
     <div class="token"><div class="swatch" style="background:#E5B567"></div><b>sand</b> <code>#E5B567</code><br>辅助金 / 深底强调</div>
-    <div class="token"><div class="swatch" style="background:#F4F5EF"></div><b>bg</b> <code>#F4F5EF</code><br>页面底色</div>
+    <div class="token"><div class="swatch" style="background:#F4F5EF"></div><b>bg</b> <code>#F4F5EF</code><br>页面底色 + 有机 radial 渐变</div>
     <div class="token"><div class="swatch" style="background:#22302B"></div><b>ink</b> <code>#22302B</code><br>正文</div>
   </div>
   <p style="font-size:13px;color:var(--muted);margin-top:10px">字体：Noto Serif SC（衬线标题）/ Noto Sans SC（正文），经 miaoda.feishu.cn 自托管镜像加载，附系统回退栈。组件：subhero、quick-grid、qa-grid、compare 表、benefit-grid、req-grid、tl 时间轴、faq、contact 表单。</p>
+  <div class="note">2026-10-13 有机流体重设计（参考 Goodpatch 15 周年纪念站）：新增 <b>MOTU 吉祥物</b>（绿色水滴精灵 SVG，hero/subhero 浮动）、<b>旋转圆形文字徽章</b>（首页 hero）、blob 流体装饰、标题波浪下划线（em 伪元素）、页脚 SVG 波浪顶、卡片圆角 26px + 渐变顶条、导航/按钮/表单/时间轴/表格全量渐变与圆角升级；<b>保持绿色为主题色</b>，mint 系为辅助绿；动效尊重 prefers-reduced-motion。</div>
 
   <h2>页面与板块层级</h2>
   <div class="tree">
@@ -150,6 +153,7 @@
   <h2>变更记录</h2>
   <table>
     <tr><th>日期</th><th>变更</th><th>文件</th></tr>
+    <tr><td>2026-10-13</td><td><b>全站有机流体重设计</b>（参考 Goodpatch 15 周年纪念站，保持绿色主题）：新增 MOTU 吉祥物 IP（绿色水滴精灵，hero/subhero 浮动动画）、首页旋转圆形文字徽章、blob 流体装饰、标题波浪下划线、页脚波浪顶、卡片 26px 圆角 + 渐变顶条、导航/按钮/表单/时间轴/表格全量渐变升级、页面底色有机 radial 渐变；mint 辅助绿色系；动效尊重 reduced-motion</td><td>index.html → 发布</td></tr>
     <tr><td>2026-10-13</td><td>L-1 / EB-1C 从墨西哥页独立为第五视图「美国绿卡」（#/l1）：导航、首页目的地第三卡、页脚、路由、表单、GEO 问答、FAQ、SEO title 全面接入；墨西哥页保留 L-1 FAQ 并指向新页</td><td>index.html → 发布</td></tr>
     <tr><td>2026-10-13</td><td>墨西哥页新增「L-1 签证转绿卡（EB-1C）」板块（L-1A / L-1B / EB-1C 三卡 + 对比表 + 说明）；FAQ 与 JSON-LD 增加对应问答；head description / keywords 同步扩展；修复时间轴圆点 1px 对齐与首页 enterprise 卡片深底文字对比度问题</td><td>index.html → 发布</td></tr>
     <tr><td>2026-10-04</td><td>墨西哥页新增「墨西哥公民专属美国签证」板块（TN / BCC / E-2 三卡 + 对比表 + 注意事项）；FAQ 与 JSON-LD 增加对应问答；head description / keywords 同步扩展</td><td>index.html → index_embed.html → 发布</td></tr>
